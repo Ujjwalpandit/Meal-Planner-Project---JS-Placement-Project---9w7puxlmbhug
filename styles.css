@@ -1,1 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Pacifico&family=Rubik:wght@300&display=swap');
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-heading {
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+    /* text-align: center; */
+    width: 100%;
+    position: sticky;
+    top: 1px;
+}
+
+.height-weight-age {
+    display: flex;
+    justify-content: center;
+}
+
+.height-div {
+    margin: 0 40px;
+}
+
+h1 {
+    background-color: #dc492a;
+    color: white;
+    text-decoration: underline;
+    margin: 1px;
+    padding:0 10rem;
+}
+
+.meal-generator {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.gender-activity {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 5px;
+}
+
+input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 12px 3px white;
+}
+
+select {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 140px;
+    box-shadow: 1px 1px 12px 3px white;
+}
+
+.meal-generate-button {
+    display: flex;
+    justify-content: center;
+ }
+
+button {
+    border-radius: 15px;
+    border: 1px solid gray;
+    background-color: #dc492a;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 1px 1px 12px 4px #808080c9;
+}
+
+button:hover {
+    border-radius: 15px;
+    border: 2px solid gray;
+    background-color: #dc492a;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 1px 1px 12px 4px #808080c9;
+}
+
+
+.meal {
+    width: 12rem;
+    height: 16rem;
+    background-color: #dc492a;
+    margin: 10px 50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 4px #808080c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.meals {
+    display: flex;
+}
+
+.ingredients {
+    margin: 40px 0;
+    width: 48.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 4px #808080c9;
+    display: flex;
+    justify-content: space-around;
+}
+
+.show-meal-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    overflow: auto;
+}
+
+h4 {
+    margin: 10px 0;
+}
+.warning {
+    margin: 0 10px;
+    color: red;
+    display: none;
+}
+
+#warning-highlite {
+    display: block;
+}
+
+.warning-activity, .warning-gender {
+    margin: 0;
+}
+
+.imageClass {
+    width: 180px;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.showImage {
+    width: 192px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    text-align: center;
+    font-size: 12.5px;
+}
+
+.anchorName {
+    text-decoration: none;
+    color: white;
+    margin: 4px;
+    font-size: 14px;
+}
+
+.borderAnchor {
+    border: 1px solid white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.colories {
+    position: absolute;
+    bottom: 45px;
+}
+
+h3 {
+    margin: 5px;
+    color: #dc492a;
+    font-family: 'Rubik', sans-serif;
+}
+
+h4 {
+    color: #dc492a;
+    font-family: 'Rubik', sans-serif;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .height-weight-age {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .height-div {
+        margin: 3px;
+    }
+
+    .gender-activity {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    input {
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        box-shadow: 1px 1px 12px 3px white;
+        width: 8.5rem;
+    }
+
+    .meals {
+        display: block;
+    }
+
+    .ingredients {
+        margin: 40px 0;
+        width: 12.5rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 12px 4px #808080c9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

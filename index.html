@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer type="module"></script>
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="menu-heading">
+            <h1>Meal Planner</h1>
+        </div>
+        <div class="meal-generator">
+            <div class="height-weight-age">
+                <div class="height-div"><input class="height" type="text" placeholder="   Enter Height (cm)">
+                <div class="warning warning-height">Please enter height</div></div>
+                <div class="height-div"><input class="weight" type="text" placeholder="   Enter Weight (kg)">
+                <div class="warning warning-weight">Please enter weight</div></div>
+                <div class="height-div"><input class="age" type="text" placeholder="   Enter Age">
+                <div class="warning warning-age">Please enter age</div></div>
+            </div>
+            <div class="gender-activity">
+                <div class="height-div">
+                    <select name="gender" class="gender">
+                        <option value="none" selected disabled hidden>Gender</option>
+                        <option value="m">male</option>
+                        <option value="f">female</option>
+                    </select>
+                    <div class="warning warning-gender">Please select gender</div>
+                </div>
+                <div class="height-div"><select name="activity" class="activity">
+                    <option value="none" selected disabled hidden>Activity level</option>
+                    <option value="1">Light</option>
+                    <option value="2">Moderately</option>
+                    <option value="3">Active</option>
+                </select>
+                <div class="warning warning-activity">Please select activity</div>
+            </div>
+            </div>
+            <div class="meal-generate-button">
+                <button id="btn" type="button">Generate Meals</button>
+            </div>
+        </div>
+        <div class="show-meal-plan">
+            <div class="dummy-meal"></div>
+            <div class="ingredientContainer"></div>
+        </div>
+    </div>
+</body>
+
+</html>
