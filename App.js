@@ -17,15 +17,19 @@ const activityWarning = document.querySelector(".warning-activity");
 const menuCard = document.querySelector(".dummy-meal");
 const ingredientContainer = document.querySelector(".ingredientContainer");
 
+
+
 const url = {
   base: "https://api.spoonacular.com/mealplanner/generate",
-  apiKey: "746b258a0e9545b39106766b99414914",
+  apiKey: "951ad27fb20b4179af69991a03acd01d",
 };
 
 const imageUrl = {
   base: "https://webknox.com/recipeImages/",
   size: "-556x370",
 };
+
+let Url = "https://api.spoonacular.com/mealplanner/generate?apiKey=746b258a0e9545b39106766b99414914&timeFrame=day";
 
 function takeTheValues() {
   /*-------------warning message start-----------------*/
@@ -108,10 +112,10 @@ function takeTheValues() {
 
 async function getTheDate(cal) {
   let tempUrl;
-  if (cal === 0) {
-    tempUrl = `${url.base}?apiKey=${url.apiKey}&timeFrame=day`;
+  if (cal) {
+    tempUrl = Url+`&targetCalories=${cal}`;
   } else {
-    tempUrl = `${url.base}?apiKey=${url.apiKey}&timeFrame=day&targetCalories=${cal}`;
+    tempUrl = Url;
   }
   try {
     const req = await fetch(tempUrl);
@@ -257,7 +261,7 @@ function forEquipments(arr) {
 
 function createListForMeal(arr, ingDiv, id, text, obj) {
   const ingredient = document.createElement("div");
-  ingredient.classList = id;
+  ingredient.classList = id + " givePadding";
   const h4Tag = document.createElement("h4");
   h4Tag.innerText = text;
   const unOrderedList = document.createElement("ul");
@@ -286,4 +290,3 @@ function createListForMeal(arr, ingDiv, id, text, obj) {
 }
 genrateBtn.addEventListener("click", takeTheValues);
 
-//`https://api.spoonacular.com/mealplanner/generate?apiKey={apikey}&timeFrame=day&targetCalories=${calories}`;
