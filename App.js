@@ -208,7 +208,7 @@ function mealIngredientsCard(id, mainDiv) {
     fetchForFirstTime(e.target.id.slice(1), "ingredientWidget");
     setTimeout(() => {
       fetchForFirstTime(e.target.id.slice(1), "equipmentWidget");
-    }, 1000);
+    }, 2000);
     e.stopPropagation();
   });
 }
