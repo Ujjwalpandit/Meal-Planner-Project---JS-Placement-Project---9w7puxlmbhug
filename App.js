@@ -1,5 +1,6 @@
 // api key : 746b258a0e9545b39106766b99414914
 // api 2nd key : 951ad27fb20b4179af69991a03acd01d
+// api 3rd key : 328df7057dd8498fbca288d49e2b8bb6
 
 const genrateBtn = document.querySelector("#btn");
 const heightInput = document.querySelector(".height");
@@ -22,6 +23,7 @@ const ingredientContainer = document.querySelector(".ingredientContainer");
 const url = {
   base: "https://api.spoonacular.com/mealplanner/generate",
   apiKey: "951ad27fb20b4179af69991a03acd01d",
+  apiKey2: "328df7057dd8498fbca288d49e2b8bb6"
 };
 
 const imageUrl = {
@@ -164,7 +166,7 @@ function mealPlanMuneCard(arr) {
     const fetchCalories = async () => {
       try {
         const nutrition = await fetch(
-          `https://api.spoonacular.com/recipes/${item.id}/nutritionWidget.json?apiKey=${url.apiKey}`
+          `https://api.spoonacular.com/recipes/${item.id}/nutritionWidget.json?apiKey=${url.apiKey2}`
         );
         const resNutrition = await nutrition.json();
         nutritionDisplay.innerText = `Calories - ${resNutrition.calories.slice(
@@ -218,7 +220,7 @@ function fetchForFirstTime(id, urlQuary) {
   const fetchTheData = async () => {
     try {
       const req = await fetch(
-        `https://api.spoonacular.com/recipes/${id}/${urlQuary}.json?apiKey=${url.apiKey}`
+        `https://api.spoonacular.com/recipes/${id}/${urlQuary}.json?apiKey=${url.apiKey2}`
       );
       const res = await req.json();
       if (urlQuary === "ingredientWidget") {
