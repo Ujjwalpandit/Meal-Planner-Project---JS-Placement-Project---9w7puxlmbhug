@@ -120,7 +120,7 @@ async function getTheDate(cal) {
   try {
     const req = await fetch(tempUrl);
     const res = await req.json();
-    console.log(res);
+    // console.log(res);
     mealPlanMuneCard(res.meals);
   } catch (error) {
     console.log(error);
@@ -202,7 +202,7 @@ function mealPlanMuneCard(arr) {
 }
 
 function mealIngredientsCard(id, mainDiv) {
-  console.log(id);
+  // console.log(id);
   mainDiv.addEventListener("click", async (e) => {
     console.log(e.target.id.slice(1));
     fetchForFirstTime(e.target.id.slice(1), "ingredientWidget");
@@ -214,7 +214,7 @@ function mealIngredientsCard(id, mainDiv) {
 }
 
 function fetchForFirstTime(id, urlQuary) {
-  console.log(id);
+  // console.log(id);
   const fetchTheData = async () => {
     try {
       const req = await fetch(
@@ -223,10 +223,10 @@ function fetchForFirstTime(id, urlQuary) {
       const res = await req.json();
       if (urlQuary === "ingredientWidget") {
         createSectionForIngredients(res["ingredients"], "ingredients");
-        console.log(res["ingredients"]);
+        // console.log(res["ingredients"]);
       } else {
         forEquipments(res["equipment"]);
-        console.log(res["equipment"]);
+        // console.log(res["equipment"]);
       }
       return true;
     } catch (error) {
