@@ -262,6 +262,7 @@ function forEquipments(arr) {
 }
 
 function createListForMeal(arr, ingDiv, id, text, obj) {
+  console.log(arr);
   const ingredient = document.createElement("div");
   ingredient.classList = id + " givePadding";
   const h4Tag = document.createElement("h4");
@@ -291,4 +292,7 @@ function createListForMeal(arr, ingDiv, id, text, obj) {
   ingDiv.appendChild(ingredient);
 }
 genrateBtn.addEventListener("click", takeTheValues);
+
+
+
 
