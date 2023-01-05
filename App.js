@@ -166,7 +166,7 @@ function mealPlanMuneCard(arr) {
     const fetchCalories = async () => {
       try {
         const nutrition = await fetch(
-          `https://api.spoonacular.com/recipes/${item.id}/nutritionWidget.json?apiKey=${url.apiKey2}`
+          `https://api.spoonacular.com/recipes/${item.id}/nutritionWidget.json?apiKey=${url.apiKey}`
         );
         const resNutrition = await nutrition.json();
         nutritionDisplay.innerText = `Calories - ${resNutrition.calories.slice(
@@ -220,7 +220,7 @@ function fetchForFirstTime(id, urlQuary) {
   const fetchTheData = async () => {
     try {
       const req = await fetch(
-        `https://api.spoonacular.com/recipes/${id}/${urlQuary}.json?apiKey=${url.apiKey2}`
+        `https://api.spoonacular.com/recipes/${id}/${urlQuary}.json?apiKey=${url.apiKey}`
       );
       const res = await req.json();
       if (urlQuary === "ingredientWidget") {
